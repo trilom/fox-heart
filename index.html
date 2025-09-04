@@ -151,6 +151,128 @@
   </head>
   <body>
     <main class="card" aria-labelledby="title">
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 640" role="img" aria-labelledby="title desc">
+        <title id="title">Derpy fox meme with Texas hat</title>
+        <desc id="desc">Derpy fox in a Texas cowboy hat with meme text above and below. Top text emphasizes 'HEAD' in red and 'BLUE' in blue. Bottom text continues poem in all caps Impact font.</desc>
+
+        <defs>
+          <linearGradient id="foxFur" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#ff8a00"/>
+            <stop offset="100%" stop-color="#ff5e00"/>
+          </linearGradient>
+          <linearGradient id="innerEar" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#ffbfb0"/>
+            <stop offset="100%" stop-color="#ff9e8a"/>
+          </linearGradient>
+          <style>
+            .stroke-soft { stroke: #472b16; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+            .cream { fill: #fff3e1; }
+            .brown { fill: #6b4a2f; }
+            .dark { fill: #3a2a1f; }
+            .meme-text { 
+              font: bold 40px/1.2 "Impact", "Arial Black", sans-serif; 
+              fill: white; 
+              stroke: black; 
+              stroke-width: 5px; 
+              text-anchor: middle;
+            }
+            .red { fill: red; stroke: black; stroke-width: 3px; }
+            .blue { fill: blue; stroke: black; stroke-width: 3px; }
+          </style>
+        </defs>
+
+        <!-- Top Meme Text -->
+        <text x="256" y="60" class="meme-text">
+          I MISS YOUR RED <tspan class="red">HEAD</tspan>
+        </text>
+        <text x="256" y="110" class="meme-text">
+          THIS EMPTY SPACE IS <tspan class="blue">BLUE</tspan>
+        </text>
+
+        <!-- Fox group -->
+        <g id="fox" transform="translate(0,100)">
+          <!-- Tail -->
+          <path d="M410,356
+                  c-18,28 -60,46 -104,28
+                  c-12,-5 -16,-22 -1,-27
+                  c25,-8 54,-23 68,-44
+                  c22,-33 13,-62 -9,-72
+                  c-4,-2 -5,-8 -1,-11
+                  c20,-14 63,15 64,61
+                  C428,317 422,338 410,356z"
+                fill="url(#foxFur)" class="stroke-soft"/>
+          <path d="M412,340c-6,10 -21,18 -36,19
+                  c10,-9 18,-18 22,-27" class="cream stroke-soft"/>
+
+          <!-- Body -->
+          <ellipse cx="250" cy="330" rx="130" ry="90" fill="url(#foxFur)" class="stroke-soft"/>
+          <path d="M170,360
+                  c20,-34 60,-56 80,-56
+                  c20,0 60,22 80,56
+                  c-22,18 -54,28 -80,28
+                  c-26,0 -58,-10 -80,-28z"
+                class="cream stroke-soft"/>
+
+          <!-- Head -->
+          <g id="head" transform="translate(0,-20)">
+            <ellipse cx="250" cy="230" rx="110" ry="90" fill="url(#foxFur)" class="stroke-soft"/>
+            <!-- Cheeks -->
+            <ellipse cx="205" cy="260" rx="48" ry="36" class="cream stroke-soft"/>
+            <ellipse cx="295" cy="260" rx="48" ry="36" class="cream stroke-soft"/>
+
+            <!-- Ears -->
+            <g transform="translate(160,150)">
+              <path d="M0,60 L-40,-18 L34,0 Z" fill="url(#foxFur)" class="stroke-soft"/>
+              <path d="M-4,46 L-28,0 L18,12 Z" fill="url(#innerEar)" class="stroke-soft"/>
+            </g>
+            <g transform="translate(340,150) scale(-1,1)">
+              <path d="M0,60 L-40,-18 L34,0 Z" fill="url(#foxFur)" class="stroke-soft"/>
+              <path d="M-4,46 L-28,0 L18,12 Z" fill="url(#innerEar)" class="stroke-soft"/>
+            </g>
+
+            <!-- Eyes -->
+            <ellipse cx="220" cy="240" rx="18" ry="22" fill="#fff" class="stroke-soft"/>
+            <ellipse cx="280" cy="242" rx="14" ry="20" fill="#fff" class="stroke-soft"/>
+            <circle cx="214" cy="246" r="6" class="dark"/>
+            <circle cx="286" cy="248" r="6" class="dark"/>
+
+            <!-- Nose & mouth -->
+            <circle cx="250" cy="268" r="7" class="dark"/>
+            <path d="M238,282 q12,10 24,0" class="stroke-soft" fill="none"/>
+
+            <!-- Hat -->
+            <g transform="translate(250,155)">
+              <!-- Brim -->
+              <path d="M-120,24 c30,-18 240,-18 270,0 c-12,16 -76,28 -135,28 c-59,0 -123,-12 -135,-28z"
+                    class="brown stroke-soft"/>
+              <!-- Crown -->
+              <path d="M-50,0 c-18,-8 -28,-26 -18,-40 c30,-40 126,-40 156,0 c10,14 0,32 -18,40 c-20,8 -100,8 -120,0z"
+                    class="brown stroke-soft"/>
+              <!-- Band -->
+              <rect x="-70" y="6" width="140" height="14" rx="6" class="dark"/>
+              <!-- Badge -->
+              <g transform="translate(0,6)">
+                <rect x="-40" y="0" width="80" height="14" rx="3" fill="#f2c55c" class="stroke-soft"/>
+                <text x="0" y="11" text-anchor="middle" font-family="Verdana, sans-serif" font-size="10" fill="#3a2a1f" font-weight="bold">TEXAS</text>
+                <!-- Tiny outhouse -->
+                <rect x="28" y="-10" width="12" height="20" fill="#6b4a2f" stroke="#3a2a1f" stroke-width="1"/>
+                <polygon points="28,-10 34,-18 40,-10" fill="#3a2a1f"/>
+                <circle cx="34" cy="-2" r="2" fill="#fff"/>
+              </g>
+            </g>
+          </g>
+        </g>
+
+        <!-- Bottom Meme Text -->
+        <text x="256" y="560" class="meme-text">
+          TIME DRAGS, MY HEART FEELS UNFED
+        </text>
+        <text x="256" y="610" class="meme-text">
+          I MISS THEM — AND YOU TOO
+        </text>
+      </svg>
+
       <header>
         <span class="dot" aria-hidden="true"></span>
         <div>
@@ -167,6 +289,7 @@
         aria-label="Fox with a red heart and the words I miss you"
       >
         <!-- SVG Scene -->
+        
         <svg
           viewBox="0 0 480 360"
           role="img"
@@ -262,27 +385,6 @@
             </g>
           </g>
 
-          <!-- Caption -->
-          <g transform="translate(110,320)">
-            <text
-              x="0"
-              y="0"
-              font-size="28"
-              fill="var(--text)"
-              font-weight="700"
-            >
-              I miss you
-            </text>
-            <text
-              x="150"
-              y="0"
-              font-size="28"
-              fill="var(--heart)"
-              aria-hidden="true"
-            >
-              ❤
-            </text>
-          </g>
         </svg>
       </section>
     </main>
